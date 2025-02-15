@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Portfolio Website</title>
+</head>
+<body>
+    <header>
+        
+        <div class="menu-button" onclick="toggleMenu()">☰</div>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact me</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="jaanu4.jpg" alt="profile photo">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span> <br> Minnallagari Mahammad Gouse</span></h1>
+            <h3 class="typing-text">I'm a <span>Software Developer</span></h3>
+            <p>Welcome to my portfolio! Aspiring Software Developer with a strong foundation in programming and a passion for emerging
+                technologies, seeking a challenging position to leverage my skills in software development and
+                problem-solving. Eager to contribute to innovative projects, collaborate with diverse teams, and
+                continuously learn to drive value for clients and enhance my professional growth."</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mahammad-gouse-ba6379306"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Gouse7893"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/mr_rider014/?next=%2F&hl=en"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="buttons">
+                <a href="#contact" class="btn">Hire</a>
+                <a href="MahmmadResume.pdf" download class="btn">Download CV</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+        <section id="education" class="education-section">
+            
+            <br>
+            <br>
+            <br>
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="degree">Bachelor of Technology in Computer Science</h3>
+                        <p class="institution">Siddharth institute of engineering and technology</p>
+                        <span class="timeline-date">2021 - 2025</span>
+                        <p class="description"> cgpa: 8.16 <br>Graduated with Honors, specialized in Software Development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="degree">Inter</h3>
+                        <p class="institution">Narayana junior college</p>
+                        <span class="timeline-date">2019 - 2021</span>
+                        <p class="description">Marks: 934</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="degree">SSC</h3>
+                        <p class="institution">Vijayanikethan E.M High School</p>
+                        <span class="timeline-date">2018- 2019</span>
+                        <p class="description"> cgpa: 9.2 </p>
+                    </div>
+                </div>
+                <!-- Add more timeline items as needed -->
+            </div>
+        </section>
+        <script>
+         document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    function animateOnScroll() {
+        const windowHeight = window.innerHeight;
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const itemBottom = item.getBoundingClientRect().bottom;
+
+            if (itemTop < windowHeight - 100 && itemBottom > 0) { // Adjust trigger point as needed
+                item.classList.add('show');
+                item.classList.remove('hide');
+            } else {
+                item.classList.remove('show');
+                item.classList.add('hide');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Initial check in case items are already in view
+});
+
+    </script>
+    <section class="skills-section" id="skills">
+        <div class="skills-container">
+            <br>
+            <br>
+            <br>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="data:image/png;base64,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" alt="java">
+                </div>
+                <div class="skill-item">
+                    <img src="https://miro.medium.com/v2/resize:fit:700/1*3IcLSFuT8PQg4cUBaRXH1A.png" alt="python">
+                </div>
+                <div class="skill-item">
+                    <img src="https://e7.pngegg.com/pngimages/603/759/png-clipart-css3-cascading-style-sheets-logo-html-world-wide-web-blue-angle-thumbnail.png" alt="css">
+                </div>
+                <div class="skill-item">
+                    <img src="https://w7.pngwing.com/pngs/160/708/png-transparent-javascript-logo-javascript-logo-language-algorithm-app-3d-icon-thumbnail.png" alt="js">
+                </div>
+                <div class="skill-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVF2FA2t-D_3YR3yzxrbxNKCciO0aN-2CWv0wk7nIdpp0sucAqXh9lMRBbroTxbWpOHw0&usqp=CAU" alt="js">
+                </div>
+                <!-- Add more skill items as needed -->
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects-section">
+        <br>
+        <br>
+        <br>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-container">
+        <!-- Example Project 1 -->
+        <div class="project-item">
+            <h3 class="project-title">Tic-Tac-Toe</h3>
+            <p class="project-description">Developed an Interactive Tic Tac Toe Game: Created a fully functional Tic Tac Toe game with an intuitive user interface, ensuring a seamless and engaging user experience across various devices.</p>
+            <a href="https://github.com/Gouse7893/tic-tac-toe.git" class="btn">View Project</a>
+        </div>
+        <!--Example Project 2 -->
+        <div class="project-item">
+            <h3 class="project-title">LibraryManagementSystem</h3>
+            <p class="project-description">Developed an Innovative Real Estate App: Designed and implemented a smart real estate application utilizing advanced algorithms for property recommendations, improving user experience and engagement.</p>
+            <a href="https://github.com/Gouse7893/LibraryManagementSystem" class="btn">View Project</a>
+        </div> 
+        <!-- Add more projects as needed -->
+    </div>
+</section>
+
+<section id="certifications" class="certifications-section">
+    <br>
+            <br>
+            <br>
+    <h2 class="section-title">Certifications</h2>
+    <div class="certifications-container">
+        <!-- Example Certification 1 -->
+        <div class="certification-item">
+            <h3 class="certification-title">JAVA</h3>
+            <p class="certification-details">Java Intern
+                CODEGENIUS <br><br>
+               10/2024 - 11/2024<br><br>
+                Achievements/Tasks <br><br>
+               Developed a project based on java concepts.<br><br>
+                Enhanced by Technical skills.<br><br>
+                Time Management Skill has been increased.<br><br>
+                <a href="https://drive.google.com/file/d/17y98iwx6oTA39ds6a3PH5D-PsKHyDDPu/view?usp=drivesdk" class="styled-link">click here</a>
+            </p>
+        </div>
+        <!-- Example Certification 2 -->
+        <div class="certification-item">
+            <h3 class="certification-title">PYTHON</h3>
+            <p class="certification-details"> STRYDO <br><br>
+                11/2023 - 12/2023<br><br>
+                 Achievements/Tasks <br><br>
+                
+                Learnt pillars of python oops concepts. Applied<br><br>
+                 oops concept to develop an application.<br><br>
+                  
+                 I had increased by problem solving skills <br><br>
+                 <a href="https://drive.google.com/file/d/1zXMQ2yMLLIWl1fiJc0gEEJlZxPatRj50/view?usp=drivesdk"  class="styled-link">click here</a>
+                
+                </p>
+        </div>
+        <!-- Add more certifications as needed -->
+    </div>
+</section>
+
+<section id="contact" class="contact-section"><br><br><br>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-container">
+        <form action="https://submit-form.com/SMW53zkFT"   class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+    
+       
+
+</body>
+</html>
